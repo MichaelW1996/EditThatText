@@ -1,0 +1,4 @@
+# Build the client-side code
+cd client
+npm install --production
+npm run build
