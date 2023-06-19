@@ -1,5 +1,9 @@
 import { openDB } from "idb";
 
+(async () => {
+  await initdb();
+})();
+
 const initdb = async () =>
   openDB("jate", 1, {
     upgrade(db) {
@@ -32,5 +36,3 @@ export const getDb = async () => {
   console.log("Retreived data from database", result);
   return result;
 };
-
-initdb();
